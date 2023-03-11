@@ -17,11 +17,10 @@
       <h2>Event Practice</h2>
       <button v-on:click="showAlert">Show Alert</button>
       <hr />
-      <input type="text" v-on:input="setName" />
-      <p>{{ name }}</p>
+      <input type="text" v-on:input="setName" v-on:keyup.enter="submitName" />
+      <p>Type: {{ name }}</p>
+      <p>Press Enter: {{ submittedName }}</p>
       <hr />
-      <input type="text" v-on:keyup.enter="submitName" />
-      <p>{{ submittedName }}</p>
     </section>
   </body>
 </html>

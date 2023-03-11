@@ -14,22 +14,22 @@
       <h1>Vue Events</h1>
     </header>
     <section id="events">
+      <form action="">
+        <input type="text">
+        <button v-on:click.prevent="submitForm" >Submit</button>
+      </form>
       <h2>Events in Action</h2>
       <button v-on:click="increase(5)">Add</button>
       <button v-on:click.right="decrease(5)">Remove</button>
       <p v-once>Starting Counter: {{ counter }}</p>
       <p>counter: {{ counter }}</p>
-      <input type="text" v-on:input="setName">
-      <input type="text" v-on:input="setLastName($event, 'lastName')">
-      <p>name: {{ name }}</p>
-      <input type="text" v-on:input="setName"v-on:keyup.enter="confirmInput">
+      <input type="text" v-on:keyup.enter="confirmInput">
       <p>confirmedName: {{ confirmedName }}</p>
-      <form action="">
-        <input type="text">
-        <button v-on:click.prevent="submitForm" >Submit</button>
-      </form>
+      <input type="text" v-model="name">
+      <!-- <input type="text" v-on:input="setLastName($event, 'lastName')" v-bind:value="name"> -->
+      <p>name: {{ name }}</p>
+      <button v-on:click="resetInput">Reset Input</button>
     </section>
-    
-  </body v-on: >
+    </body v-on: >
 
-</html>
+    </html>
