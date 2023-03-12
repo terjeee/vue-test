@@ -15,21 +15,21 @@
     </header>
     <section id="events">
       <form action="">
-        <input type="text">
-        <button v-on:click.prevent="submitForm" >Submit</button>
+        <input type="text" />
+        <button @click.prevent="submitForm">Submit</button>
       </form>
       <h2>Events in Action</h2>
-      <button v-on:click="increase(5)">Add</button>
-      <button v-on:click.right="decrease(5)">Remove</button>
+      <button @click="increase(5)">Add</button>
+      <button @click.right="decrease(5)">Remove</button>
       <p v-once>Starting Counter: {{ counter }}</p>
       <p>counter: {{ counter }}</p>
-      <input type="text" v-on:keyup.enter="confirmInput">
+      <input type="text" @keyup.enter="confirmInput" />
       <p>confirmedName: {{ confirmedName }}</p>
-      <input type="text" v-model="name">
+      <input type="text" v-model="name" />
       <!-- <input type="text" v-on:input="setLastName($event, 'lastName')" v-bind:value="name"> -->
       <p>name: {{ name }}</p>
-      <button v-on:click="resetInput">Reset Input</button>
+      <button @click="resetInput">Reset Input</button>
+      <p>Full Name: {{ fullName }}</p>
     </section>
-    </body v-on: >
-
-    </html>
+  </body>
+</html>
