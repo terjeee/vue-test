@@ -18,9 +18,10 @@ export default {
     };
   },
 
-  toggleDetails() {
-    this.showDetails = !this.showDetails;
+  methods: {
+    toggleDetails() {
+      this.showDetails = !this.showDetails;
+    },
   },
 };
 </script>
-np
